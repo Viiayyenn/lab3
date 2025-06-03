@@ -1,0 +1,68 @@
+/* style.css */
+
+/* ===== Hero Section ===== */
+.hero-section {
+    height: 75vh;
+    background: url('../images/hero-bg.jpg') center center / cover no-repeat;
+    position: relative;
+}
+.hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 75vh;
+    background-color: rgba(0, 0, 0, 0.5); /* Overlay tối */
+}
+.hero-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+/* ===== Padding chung cho section ===== */
+section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+/* ===== Font và màu sắc ===== */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Thay đổi màu link navbar khi hover */
+.navbar-nav .nav-link:hover {
+    color: #ffc107 !important; /* vàng nhạt khi hover */
+}
+
+/* Card trong Services */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+/* Footer */
+footer {
+    background-color: #0d6efd; /* Bootstrap primary */
+}
+
+/* Đảm bảo form Contact rộng */
+#contact form .form-control {
+    border-radius: 0.25rem;
+}
+
+/* Medium breakpoint fix (nếu cần) */
+@media (max-width: 767px) {
+    .hero-section {
+        height: 50vh;
+    }
+    .hero-section::before {
+        height: 50vh;
+    }
+}
